@@ -1,0 +1,13 @@
+[
+    {
+        "name": "UrTBD TDM Server",
+        "host": "urtbd.com",
+        "port": 1111
+    },
+  
+    {
+        "name": "UrTBD Mixed Server",
+        "host": "urtbd.com",
+        "port": 2222
+    }
+]
