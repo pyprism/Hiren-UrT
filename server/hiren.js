@@ -28,6 +28,7 @@ socket.on(
 	"error",
 	function ( error ) {
 	//error handling 
+	console.log("Something went wrong! The error says: "+error)
 	socket.close(); 
 	}
 );
@@ -46,7 +47,7 @@ socket.on(
 function getServerResponse(host,port){
     //under construction!
     
-	socket.bind(port);		
+	socket.bind(port,host);		
 		
 }
 //testing urt server 
