@@ -1,5 +1,6 @@
 var socket = require( "dgram" ).createSocket( "udp4" );
 
+var response = new Buffer("Hello World this will be sent to udp as message")
 socket.on(
 	"message",
 	function ( message, requestInfo ) {
@@ -16,6 +17,18 @@ socket.on(
 	}
 );
  
+ socket.send(
+            response,
+            0, //offset
+            response.length,
+            requestInfo.port,
+            requestInfo.address,
+            function( error, byteLength ) {
+ 
+                console.log( "... Sent response to " + requestInfo.address + ":" + requestInfo.port );
+ 
+            }
+        );
  
 socket.on(
 	"listening",
