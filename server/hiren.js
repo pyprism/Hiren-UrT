@@ -1,23 +1,13 @@
 var socket = require( "dgram" ).createSocket( "udp4" );
 
-var response = new Buffer("Hello World this will be sent to udp as message")
+var response = new Buffer("\377\377\377\377getstatus")
 socket.on(
 	"message",
 	function ( message, requestInfo ) {
 		//response that we get from the udp server
     	console.log("Message: " + message + " from " +requestInfo.address + ":" + requestInfo.port);
-	}
-);
-
-socket.on(
-	"error",
-	function ( error ) {
-	//error handling 
-	socket.close(); 
-	}
-);
- 
- socket.send(
+	
+	 	socket.send(
             response,
             0, //offset
             response.length,
@@ -29,6 +19,20 @@ socket.on(
  
             }
         );
+
+
+	}
+);
+
+socket.on(
+	"error",
+	function ( error ) {
+	//error handling 
+	socket.close(); 
+	}
+);
+ 
+
  
 socket.on(
 	"listening",
@@ -39,7 +43,11 @@ socket.on(
 	}
 );
  
-function getServerResponse(address){
-    //pass it udp server address 
-	socket.bind(address);
+function getServerResponse(host,port){
+    //under construction!
+    
+	socket.bind(port);		
+		
 }
+//testing urt server 
+getServerResponse("209.190.50.170",27960)
