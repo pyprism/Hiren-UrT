@@ -1,0 +1,19 @@
+{
+  "name": "Hiren-UrT",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pyprism/Hiren-UrT",
+  "authors": [
+    "pyprism <git.pyprism@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
