@@ -1,2 +1,1 @@
-UrT Monitor [![Dependency Status](https://david-dm.org/pyprism/Hiren-Urt.svg)](https://david-dm.org/pyprism/Hiren-Urt)
-======
+UrT Monitor [![Requirements Status](https://requires.io/github/pyprism/Hiren-UrT/requirements.svg?branch=master)](https://requires.io/github/pyprism/Hiren-UrT/requirements/?branch=master)
